@@ -14,7 +14,7 @@ export default function FarmerChatWidget() {
 //   useEffect(() => {
 //     if (!farmerId) return;
 
-//     axios.post("http://localhost:5000/chat/get-chat-users", { farmerId })
+//     axios.post("https://agronexus-bi3q.onrender.com/chat/get-chat-users", { farmerId })
 //       .then(res => {
 //         if (res.data.success) setUsers(res.data.data);
 //       })

@@ -122,7 +122,7 @@ data.harvestYield = harvestYield || "";
       const spokenText = event.results[0][0].transcript;
 
       try {
-        const res = await axios.post("http://localhost:5000/gemini/voice-progress", { message: spokenText });
+        const res = await axios.post("https://agronexus-bi3q.onrender.com/gemini/voice-progress", { message: spokenText });
         if (res.data.success) {
           setValue("description", res.data.data, { shouldValidate: true });
           toast.success("Voice recorded successfully");

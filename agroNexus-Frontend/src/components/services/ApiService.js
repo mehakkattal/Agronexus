@@ -1,5 +1,5 @@
 import axios from "axios"
-const BASEURL="http://localhost:5000"
+const BASEURL="https://agronexus-bi3q.onrender.com"
 
 class ApiServices{
     getToken(){
