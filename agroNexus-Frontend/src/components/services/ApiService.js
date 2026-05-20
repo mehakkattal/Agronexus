@@ -98,6 +98,14 @@ class ApiServices{
         return axios.post(BASEURL+"/farmer/booking/delete",data,{headers:this.getToken()})
     }
 
+    DeleteBooking(data){
+   return axios.post(
+      BASEURL+"/user/user/booking/delete",
+      data,
+      {headers:this.getToken()}
+   )
+}
+
     addProgress(data){
         return axios.post(BASEURL+"/farmer/progress/add", data,{headers:this.getToken()})
     }
