@@ -17,6 +17,7 @@ router.use(require("../middleware/UserTokenChecker"))
 
 router.post("/user/booking/add",BookingController.add)
 router.post("/user/booking/update",BookingController.update)
+router.post("/user/booking/delete",BookingController.Delete)
 // router.post("/sendMail", mailController.mail)
 
 
