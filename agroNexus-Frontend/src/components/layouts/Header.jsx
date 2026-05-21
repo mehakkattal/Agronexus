@@ -49,7 +49,7 @@ import Swal from "sweetalert2";
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
                     <span class="far fa-envelope me-2"></span>
-                    <span>info@agrinova.com</span>
+                    <span>info@agroNexus.com</span>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
@@ -68,7 +68,7 @@ import Swal from "sweetalert2";
    
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h1 class=" fa fa-seedling m-0">AgriNova</h1>
+            <h1 class=" fa fa-seedling m-0">AgroNexus</h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>

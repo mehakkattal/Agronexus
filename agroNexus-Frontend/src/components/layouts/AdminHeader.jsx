@@ -43,7 +43,7 @@ function AdminHeader() {
         </div>
         <div className="h-100 d-inline-flex align-items-center">
           <span className="far fa-envelope me-2" />
-          <span>info@example.com</span>
+          <span>infoagroNexus@example.com</span>
         </div>
       </div>
       <div className="col-lg-5 px-5 text-end">
@@ -72,7 +72,7 @@ function AdminHeader() {
       href="index.html"
       className="navbar-brand d-flex align-items-center px-4 px-lg-5"
     >
-      <h1 className=" fa fa-seedling text-primarym-0">AgriNova</h1>
+      <h1 className=" fa fa-seedling text-primarym-0">AgroNexus</h1>
     </a>
     <button
       type="button"
