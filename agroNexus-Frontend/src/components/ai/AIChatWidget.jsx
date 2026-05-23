@@ -64,7 +64,7 @@ export default function AIChatWidget({ role }) {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/gemini/chat",
+        "https://agronexus-bi3q.onrender.com/gemini/chat",
         {
           message: message,
           role: role   // 🔥 IMPORTANT
