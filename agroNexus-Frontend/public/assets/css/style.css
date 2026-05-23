@@ -552,3 +552,709 @@ h6,
     align-items: center;
     border-radius: 12px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= FLOAT BUTTON ================= */
+
+.ai-float-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 80px;
+  height: 50px;
+  z-index: 1200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* ================= MAIN BOT ================= */
+
+.cute-ai-bot {
+  position: relative;
+  width: 105px;
+  height: 120px;
+  animation: floatBot 4s ease-in-out infinite;
+  transition: 0.3s ease;
+}
+
+.cute-ai-bot:hover {
+  transform: scale(1.06);
+}
+
+@keyframes floatBot {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* ================= SHADOW / GLOW ================= */
+
+.bot-shadow {
+  position: absolute;
+  width: 95px;
+  height: 95px;
+  background: radial-gradient(
+    circle,
+    rgba(76,175,80,0.22),
+    rgba(76,175,80,0.02)
+  );
+
+  border-radius: 50%;
+
+  top: 5px;
+  left: 0;
+
+  filter: blur(3px);
+
+  animation: glowPulse 3s infinite;
+}
+
+@keyframes glowPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+/* ================= LEAF ================= */
+
+.bot-leaf {
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.leaf-left,
+.leaf-right {
+  position: absolute;
+  width: 18px;
+  height: 12px;
+  background: linear-gradient(
+    145deg,
+    #6fd66f,
+    #2e7d32
+  );
+
+  border-radius: 100% 0 100% 0;
+}
+
+.leaf-left {
+  transform: rotate(78deg);
+  left: -16px;
+}
+
+.leaf-right {
+  transform: rotate(-10deg);
+  right: -15px;
+}
+
+.leaf-stem {
+  position: absolute;
+  width: 3px;
+  height: 14px;
+  background: #2e7d32;
+  left: 50%;
+  top: 4px;
+  transform: translateX(-50%);
+  border-radius: 10px;
+} 
+
+
+
+
+
+/* ================= HEAD ================= */
+
+.bot-head {
+  position: relative;
+
+  width: 100px;
+  height: 72px;
+
+  margin: 16px auto 0;
+
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #edf7ed
+  );
+
+  border-radius: 34px;
+
+  border: 4px solid #43a047;
+
+  box-shadow:
+    inset -5px -5px 10px rgba(0,0,0,0.06),
+    inset 5px 5px 10px rgba(255,255,255,0.9),
+    0 10px 20px rgba(0,0,0,0.18);
+}
+
+/* ================= EARS ================= */
+
+.bot-ear {
+  position: absolute;
+
+  width: 14px;
+  height: 30px;
+
+  background: linear-gradient(
+    145deg,
+    #8be28b,
+    #43a047
+  );
+
+  top: 18px;
+
+  border-radius: 20px;
+}
+
+.bot-ear.left {
+  left: -10px;
+}
+
+.bot-ear.right {
+  right: -10px;
+}
+
+/* ================= FACE ================= */
+
+.bot-face {
+  position: absolute;
+
+  width: 80px;
+  height: 46px;
+
+  background: linear-gradient(
+    145deg,
+    #0b2b1a,
+    #133d25
+  );
+
+  border-radius: 16px;
+
+  top: 9px;
+  left: 7px;
+
+  overflow: hidden;
+
+  box-shadow:
+    inset 0 0 15px rgba(255,255,255,0.08),
+    0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Face shine */
+
+.face-shine {
+  position: absolute;
+
+  width: 16px;
+  height: 80px;
+
+  background: rgba(255,255,255,0.12);
+
+  transform: rotate(24deg);
+
+  left: 12px;
+  top: -15px;
+}
+
+/* ================= EYES ================= */
+
+.bot-eye {
+  position: absolute;
+
+  width: 8px;
+  height: 8px;
+
+  background: #97ffaf;
+
+  border-radius: 50%;
+
+  top: 14px;
+
+  box-shadow:
+    0 0 8px #97ffaf,
+    0 0 16px #97ffaf;
+
+  animation: eyeBlink 4s infinite;
+}
+
+.bot-eye.left {
+  left: 13px;
+}
+
+.bot-eye.right {
+  right: 13px;
+}
+
+@keyframes eyeBlink {
+  0%, 94%, 100% {
+    transform: scaleY(1);
+  }
+
+  96% {
+    transform: scaleY(0.15);
+  }
+}
+
+/* ================= MOUTH ================= */
+
+
+
+
+
+ .bot-mouth {
+  position: absolute;
+
+  width: 18px;
+  height: 8px;
+
+  border-bottom: 3px solid #97ffaf;
+
+  border-radius: 0 0 14px 14px;
+
+  bottom: 9px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  box-shadow: 0 0 8px #97ffaf;
+} 
+
+/* ================= BODY ================= */
+
+.bot-body {
+  position: relative;
+
+  width: 88px;
+  height: 42px;
+
+  margin: -4px auto 0;
+
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #edf7ed
+  );
+
+  border-radius: 30px;
+
+  border: 4px solid #43a047;
+
+  box-shadow:
+    inset -4px -4px 8px rgba(0,0,0,0.06),
+    inset 4px 4px 8px rgba(255,255,255,0.9),
+    0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* ================= CORE ================= */
+
+.bot-core {
+  position: absolute;
+
+  width: 22px;
+  height: 22px;
+
+  background: radial-gradient(
+    circle,
+    #97ffaf,
+    #43a047
+  );
+
+  border-radius: 50%;
+
+  top: 8px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  box-shadow:
+    0 0 10px #97ffaf,
+    0 0 20px rgba(151,255,175,0.7);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================================
+   CHATBOX
+====================================================== */
+
+.ai-chat-box {
+  position: fixed;
+
+  bottom: 120px;
+  right: 25px;
+
+  width: 340px;
+  height: 500px;
+
+  background: #ffffff;
+
+  border-radius: 26px;
+
+  overflow: hidden;
+
+  z-index: 99999;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #edf3ed;
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.12),
+    0 0 20px rgba(67,160,71,0.08);
+
+  animation: chatOpen 0.25s ease;
+}
+
+@keyframes chatOpen {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.ai-header {
+  height: 72px;
+
+  background: linear-gradient(
+    135deg,
+    #2e7d32,
+    #43a047
+  );
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  letter-spacing: 0.4px;
+
+  flex-shrink: 0;
+
+  box-shadow:
+    0 3px 10px rgba(0,0,0,0.08);
+}
+
+
+
+
+
+
+.chat-close {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.14);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  font-size: 16px;
+
+  backdrop-filter: blur(4px);
+}
+
+.chat-close:hover {
+  background: rgba(255,255,255,0.24);
+
+  transform: scale(1.06);
+}
+
+/* ======================================================
+   BODY
+====================================================== */
+
+.ai-body {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: 18px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #f9fff9,
+      #f2f8f2
+    );
+}
+
+/* SCROLLBAR */
+
+.ai-body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.ai-body::-webkit-scrollbar-thumb {
+  background: #c7dfc8;
+  border-radius: 20px;
+}
+
+/* DEFAULT MESSAGE */
+
+.ai-body p {
+  margin: auto;
+
+  color: #4d7c50;
+
+  text-align: center;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+/* ======================================================
+   MESSAGES
+====================================================== */
+
+.user-msg,
+.ai-msg {
+  max-width: 80%;
+
+  padding: 12px 16px;
+
+  border-radius: 18px;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  word-wrap: break-word;
+
+  animation: msgShow 0.2s ease;
+}
+
+@keyframes msgShow {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* USER */
+
+.user-msg {
+  align-self: flex-end;
+
+  background: linear-gradient(
+    135deg,
+    #43a047,
+    #2e7d32
+  );
+
+  color: white;
+
+  border-bottom-right-radius: 5px;
+
+  box-shadow:
+    0 4px 10px rgba(67,160,71,0.24);
+}
+
+/* AI */
+
+.ai-msg {
+  align-self: flex-start;
+
+  background: white;
+
+  color: #222;
+
+  border-bottom-left-radius: 5px;
+
+  border: 1px solid #ebf3eb;
+
+  box-shadow:
+    0 3px 8px rgba(0,0,0,0.04);
+}
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+.ai-footer {
+  height: 78px;
+
+  padding: 0 14px;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  border-top: 1px solid #eef4ee;
+
+  flex-shrink: 0;
+}
+
+/* INPUT */
+
+.ai-footer input {
+  flex: 1;
+
+  height: 48px;
+
+  border: none;
+
+  background: #f4faf4;
+
+  border-radius: 16px;
+
+  padding: 0 16px;
+
+  outline: none;
+
+  font-size: 14px;
+
+  transition: 0.2s;
+}
+
+.ai-footer input:focus {
+  background: #eef8ef;
+
+  box-shadow:
+    0 0 0 3px rgba(76,175,80,0.1);
+}
+
+/* BUTTON */
+
+.ai-footer button {
+  min-width: 48px;
+  width: 48px;
+  height: 48px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #43a047,
+    #2e7d32
+  );
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  box-shadow:
+    0 5px 12px rgba(67,160,71,0.22);
+}
+
+.ai-footer button:hover {
+  transform: scale(1.05);
+}

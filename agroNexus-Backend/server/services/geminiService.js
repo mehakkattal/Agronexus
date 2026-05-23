@@ -328,5 +328,69 @@ Duration: ${duration}
   }
 };
 
-module.exports = { getCropSummary, getCropSuggestion };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const generateResponse = async (prompt) => {
+  try {
+    const response = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          contents: [
+            {
+              parts: [
+                { text: prompt }
+              ]
+            }
+          ]
+        })
+      }
+    );
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`Gemini API Error: ${response.status} ${errorText}`);
+    }
+
+    const result = await response.json();
+
+    const text = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+    if (!text) {
+      throw new Error("No AI response text found");
+    }
+
+    return text.trim();
+
+  } catch (error) {
+    console.error("generateResponse error:", error.message);
+    throw error;
+  }
+};
+
+module.exports = { getCropSummary, getCropSuggestion , generateResponse};
 

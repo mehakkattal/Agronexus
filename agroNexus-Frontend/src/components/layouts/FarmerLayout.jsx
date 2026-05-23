@@ -8,6 +8,7 @@ import { MoonLoader } from "react-spinners";
 import CropBubble from "../pages/CropBubble";
 
 import FarmerChatWidget from "../farmer/chat/FarmerChatWidget";
+import AIChatWidget from "../ai/AIChatWidget";
 import AdminHeader from "./AdminHeader";
 import Header from "./Header";
 
@@ -59,7 +60,7 @@ export default function FarmerLayout() {
 
                 <FarmerChatWidget />
 
-
+                <AIChatWidget role = "farmer"></AIChatWidget>
                 <CropBubble />
                 <Footer />
 
