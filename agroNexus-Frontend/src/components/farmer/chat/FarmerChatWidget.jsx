@@ -102,7 +102,7 @@ useEffect(() => {
 
 // reuse same styles
 const styles = {
-  widget: { position: "fixed", bottom: 20, right: 20, zIndex: 9999 },
+  widget: { position: "fixed", bottom: 150, right: 20, zIndex: 9999 },
   floatingButton: {
     borderRadius: "50%",
     width: 60,
