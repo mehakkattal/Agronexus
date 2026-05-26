@@ -7,7 +7,7 @@ import { toast } from "react-toastify"
 
 export default function ManageBooking() {
     const [booking, setBooking] = useState([])
-    const [loading, setLoading] = useState(true) // ✅ Loader state added
+    const [loading, setLoading] = useState(true) 
 
     const navigate = useNavigate()
     const id = sessionStorage.getItem("userId");
@@ -18,7 +18,7 @@ export default function ManageBooking() {
             userId: id
         };
 
-        setLoading(true) // ✅ Start loader
+        setLoading(true) 
 
         ApiService.allBooking(data)
             .then((res) => {
@@ -34,7 +34,7 @@ export default function ManageBooking() {
                 toast.error(err.message)
             })
             .finally(() => {
-                setLoading(false) // ✅ Stop loader
+                setLoading(false) 
             })
     }
 
