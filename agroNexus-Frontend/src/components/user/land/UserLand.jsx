@@ -51,12 +51,12 @@ export default function UserLand() {
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
                     <li class="breadcrumb-item"><a href="#">User</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">All Booking</li>
+                    <li class="breadcrumb-item active" aria-current="page">Available Lands</li>
                 </ol>
             </nav>
         </div>
     </div>
-    
+
             <div className="container-fluid py-5 bg-light">
                 <div className="container">
 
