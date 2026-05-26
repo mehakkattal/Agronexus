@@ -115,7 +115,7 @@ function Footer(){
         <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
           ©{" "}
           <a className="border-bottom" href="#">
-            Your Site Name
+            YAmrita
           </a>
           , All Right Reserved.
         </div>
