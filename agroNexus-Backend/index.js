@@ -31,7 +31,7 @@ const user = require("./server/routes/UserRoutes");
 app.use("/user", user);
 
 
-// ✅ Attach Chat Routes
+//  Attach Chat Routes
 const chatRoutes = require("./server/routes/ChatRoutes");
 app.use("/chat", chatRoutes);
 
@@ -44,7 +44,7 @@ app.get("/", (req, res) => {
 // Create HTTP server
 const server = http.createServer(app);
 
-// ✅ Create Socket.io instance
+//  Create Socket.io instance
 const io = new Server(server, {
   cors: {
     origin: "https://seedlyfrntdlive.vercel.app/",
@@ -52,10 +52,10 @@ const io = new Server(server, {
   }
 });
 
-// ✅ Store online users
+//  Store online users
 const onlineUsers = {};
 
-// ✅ Import Message Model
+//  Import Message Model
 const Message = require("./server/apis/Chat/ChatModel");
 
 // Socket connection
@@ -80,7 +80,7 @@ io.on("connection", (socket) => {
       io.to(receiverSocketId).emit("receive_private", newMessage);
     }
 
-    // 🔥 ALSO send back to sender
+    //  ALSO send back to sender
     const senderSocketId = onlineUsers[from];
     if (senderSocketId) {
       io.to(senderSocketId).emit("receive_private", newMessage);
