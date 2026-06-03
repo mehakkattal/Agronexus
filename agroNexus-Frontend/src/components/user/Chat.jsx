@@ -4,8 +4,6 @@ import axios from "axios";
 import ApiService from "../services/ApiService";
 import socket from "../services/socketService";
 
-
-
 export default function Chat({ receiverId }) {
 
   const userId = sessionStorage.getItem("userId");
